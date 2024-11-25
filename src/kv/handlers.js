@@ -89,7 +89,7 @@ export async function updateDataset (request, env) {
         customCdnSni: validateField('customCdnSni')?.trim() ?? currentSettings?.customCdnSni ?? '',
         bestVLESSTrojanInterval: validateField('bestVLESSTrojanInterval') ?? currentSettings?.bestVLESSTrojanInterval ?? '30',
         vlessConfigs: validateField('vlessConfigs') ?? currentSettings?.vlessConfigs ?? true,
-        trojanConfigs: validateField('trojanConfigs') ?? currentSettings?.trojanConfigs ?? false,
+        trojanConfigs: validateField('trojanConfigs') ?? currentSettings?.trojanConfigs ?? true,
         ports: validateField('ports')?.split(',') ?? currentSettings?.ports ?? ['443'],
         lengthMin: validateField('fragmentLengthMin') ?? currentSettings?.lengthMin ?? '100',
         lengthMax: validateField('fragmentLengthMax') ?? currentSettings?.lengthMax ?? '200',
