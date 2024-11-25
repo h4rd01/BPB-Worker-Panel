@@ -91,6 +91,7 @@ export async function updateDataset (request, env) {
         vlessConfigs: validateField('vlessConfigs') ?? currentSettings?.vlessConfigs ?? true,
         trojanConfigs: validateField('trojanConfigs') ?? currentSettings?.trojanConfigs ?? false,
         ports: validateField('ports')?.split(',') ?? currentSettings?.ports ?? ['443'],
+        ports: validateField('ports')?.split(',') ?? currentSettings?.ports ?? ['80'],
         lengthMin: validateField('fragmentLengthMin') ?? currentSettings?.lengthMin ?? '100',
         lengthMax: validateField('fragmentLengthMax') ?? currentSettings?.lengthMax ?? '200',
         intervalMin: validateField('fragmentIntervalMin') ?? currentSettings?.intervalMin ?? '1',
